@@ -31,7 +31,7 @@
                             
                             <button type="submit" class="btn btn-success">Login</button>
                             
-                            <a href="registation.php" class ="btn btn-primary">Sing Up</a>
+                            <a href="registration.php" class ="btn btn-primary">Sing Up</a>
                             <a href="#" class ="float-right">forget Password?</a>
                         </form>
                         <hr>

@@ -1,3 +1,22 @@
+<?php
+
+
+     include_once'../register.php';
+     $re = new register();
+     if($_SERVER['REQUEST_METHOD'] == 'POST'){
+          $addUser = $re->addUser($_POST);
+
+
+     }
+
+
+
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +38,7 @@
                 <div class="card">
                     <h5 class="card-header">Registration form</h5>
                     <div class="card-body">
-                        <form>
+                        <form action="" method="POST">
                             <div class="form-group">
                                 <label >Name</label>
                                 <input type ="text" name ="Name" class="form-control">
@@ -37,7 +56,7 @@
                                 <input type="password" class="form-control" id="exampleInputPassword1">
                             </div>
                             
-                            <button type="submit" class="btn btn-success">Sin up</button>
+                            <button type="submit" class="btn btn-success">Sign up</button>
                             
                           
                         </form>
