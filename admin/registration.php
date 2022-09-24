@@ -1,7 +1,7 @@
 <?php
 
 
-     include_once'../register.php';
+     include_once'../classes/register.php';
      $re = new register();
      if($_SERVER['REQUEST_METHOD'] == 'POST'){
           $addUser = $re->addUser($_POST);
@@ -35,6 +35,19 @@
     <div class="container py-5">
         <div class="row d-flex justify-content-center">
             <div class="col-md-6">
+           <span>
+            <?php
+            if(isset($addUser)){
+                ?>
+             
+             <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong><?php echo $addUser; ?></strong>
+             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+           </div>
+           <?php
+            }
+            ?>
+              </span> 
                 <div class="card">
                     <h5 class="card-header">Registration form</h5>
                     <div class="card-body">
