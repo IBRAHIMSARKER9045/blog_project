@@ -25,20 +25,27 @@ class AdminLogin{
     else{
         $select = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
         $result = $this->db->select($select);
-        if($result != false){
-            $value = $result->fetch_assoc();
-            Session::set("login",true);
-            Session::set("id",$value['id']);
-            Session::set("username",$value['username']);
-            Session::set("email",$value['email']);
-            Session::set("phone",$value['phone']);
-            header("Location: index.php");
-        }
-        else{
-            $error = "Email or Password not match";
+       if($result != false){
+                $row = mysqli_fetch_assoc($result);
+               if ($row['v_status'] == 1) {
+                session::set("login",true);
+                session::set("username",$row['username']);
+                session::set("email",$row['email']);
+                header("Location: index.php");
+               }
+                else{
+                 $error = "Your account is not verified";
+                 return $error;
+                }
+         }
+         else{
+            $error = "Email or Password is not matched";
             return $error;
-        }
+         }
     }
-  }
+    }
 }
+    
+        
+
 ?>

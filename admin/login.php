@@ -33,18 +33,51 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     <div class="container py-5">
         <div class="row d-flex justify-content-center">
             <div class="col-md-6">
+              <span>
+                <?php
+                if(isset($_SESSION['status'])){
+                    ?>
+                 
+                 <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <?= $_SESSION['status'] ?>
+                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <?php
+                 }
+                    ?>
+                    </span>
+
+
+
+                    <span>
+                <?php
+                if(isset($_SESSION['$chkLogin'])){
+                    ?>
+                 
+                 <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <?= $chkLogin ?>
+                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <?php
+                 }
+                    ?>
+                    </span>
+
                 <div class="card">
                     <h5 class="card-header">Login form</h5>
                     <div class="card-body">
-                        <form>
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <form method="POST">
+                            <div class="form-group">
+                                <label >Email</label>
+                                <input type ="email" name ="email" class="form-control">
                             </div>
-                            <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1">
-                            </div>
+                            <div class="form-group">
+                                <label >Password</label>
+                                <input type ="password" name ="password" class="form-control">
                             
                             <button type="submit" class="btn btn-success">Login</button>
                             
@@ -59,6 +92,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 </div>
             </div>
         </div>
+
 
 
         <!-- JavaScript Bundle with Popper -->
