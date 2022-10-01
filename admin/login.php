@@ -1,3 +1,20 @@
+<?php
+
+include_once '../classes/AdminLogin.php';
+$al = new AdminLogin();
+
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $email = $_POST['email'];
+    $password =  md5($_POST['password']);
+    $chkLogin = $al->LoginUser($email,$password);
+   
+}
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
