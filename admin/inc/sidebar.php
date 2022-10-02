@@ -35,20 +35,20 @@
             <li class="menu-title">Menu</li>
 
             <li>
-                <a href="index.html">
+                <a href="admin.php">
                     <i class="uil-home-alt"></i><span class="badge rounded-pill bg-primary float-end">01</span>
-                    <span>Dashboard</span>
+                    <span>DashBoard</span>
                 </a>
             </li>
 
             <li>
                 <a href="javascript: void(0);" class="has-arrow waves-effect">
                     <i class="uil-window-section"></i>
-                    <span>Layouts</span>
+                    <span>Category</span>
                 </a>
                 <ul class="sub-menu" aria-expanded="true">
                     <li>
-                        <a href="javascript: void(0);" class="has-arrow">Vertical</a>
+                        <a href="categoryAdd.php" class="has-arrow">Add Category</a>
                         <ul class="sub-menu" aria-expanded="true">
                             <li><a href="layouts-dark-sidebar.html">Dark Sidebar</a></li>
                             <li><a href="layouts-compact-sidebar.html">Compact Sidebar</a></li>
