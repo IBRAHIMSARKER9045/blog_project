@@ -39,9 +39,20 @@ class Category{
         }
     }
 }
+//select all category
+public function selectAllCategory(){
+    $query = "SELECT * FROM category";
+    $all_cat = $this->db->select($query);
+   if($all_cat != false){
+    return $all_cat;
+}
+else{
+    return false;
 }
 
 
 
 
+}
+}
 ?>
