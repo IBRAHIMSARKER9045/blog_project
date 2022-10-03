@@ -1,39 +1,47 @@
 <?php
 
 include_once '../libary/Database.php';
-include_once '../helpers/Format.php';
+include_once '../helpers/formet.php';
 
-class Category{
+class Category{ 
 
     public $db;
     public $fm;
 
     public function __construct(){
         $this->db = new Database();
-        $this->fm = new Format();
+        $this->fm = new format();
     }
-    public function Addcategory($categoryName){
-        $categoryName = $this->fr->validation($categoryName);
-        $categoryName = mysqli_real_escape_string($this->db->link, $categoryName);
-        if (empty($categoryName)) {
+    public function Addcategory($catName){
+        $catName = $this->fm->validation($catName);
+        $catName = mysqli_real_escape_string($this->db->link, $catName);
+        if (empty($catName)) {
             $msg = "Category field must not be empty!";
             return $msg;
         }else{
-            $query = "INSERT INTO category(category) VALUES('$categoryName')";
-            $categoryName = $this->db->insert($query);
-            if ($categoryName) {
-                $msg = "<span class='success'>Category inserted successfully!</span>";
+            $query = "SELECT * FROM category WHERE catName = '$catName'";
+            $result = $this->db->select($query);
+
+            if($result >0){
+                $msg = "Category already exist!";
+                return $msg;
+        }
+        else{
+            $query = "INSERT INTO category(catName) VALUES('$catName')";
+            $result = $this->db->insert($query);
+            if ($result) {
+                $msg = "Category added successfully!";
                 return $msg;
             }else{
-                $msg = "<span class='error'>Category not inserted!</span>";
+                $msg = "Category not added!";
                 return $msg;
             }
         }
-
-
-
     }
 }
+}
+
+
 
 
 ?>

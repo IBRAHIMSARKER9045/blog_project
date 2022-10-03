@@ -2,11 +2,11 @@
 include_once 'inc/header.php';
 include_once 'inc/sidebar.php';
 include_once '../classes/Category.php';
-$ct = new Category();
+$cat = new Category();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $categoryName = $_POST['categoryName'];
-    $catadd = $ct->Addcategory($categoryName);
+    $catName = $_POST['catName'];
+    $Addcatagory = $cat->Addcategory($catName);
 }
 
 
@@ -22,6 +22,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <!-- start page title -->
             <div class="row">
                 <div class="col-9">
+                   <span>
+                    <?php
+                    if (isset($Addcatagory)) {
+                       
+                    }
+                    ?>
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                     <?= $Addcatagory ?>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                   </span> 
                     <div class="page-title-box d-flex align-items-center justify-content-between">
                         <h4 class="mb-0 font-size-18">Add Category</h4>
                     </div>
@@ -36,9 +46,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <div class="card-body">
                             <form action="" method="post">
                                 <div class="mb-3 row">
-                                    <label for="categoryName" class="col-md-2 col-form-label">Category Name</label>
+                                    <label for="catName" class="col-md-2 col-form-label">Category Name</label>
                                     <div class="col-md-10">
-                                        <input class="form-control" type="text" name="categoryName" id="example-text-input">
+                                        <input class="form-control" type="text" name="catName" id="example-text-input">
                                     </div>
                                 </div>
                                 <div class="mb-3 row">

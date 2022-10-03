@@ -25,16 +25,16 @@ include_once '../config/config.php';
 
     }
 
-  //select Quary
-  public function select($query){
-   $result = mysqli_query($this->link, $query)or die($this->error__line__);
-   if(mysqli_num_rows($result)>0){
-      return $result;
-   }
-   else{
-      return false;
-   }
-  }
+ //select quary
+      public function select($query){
+         $result = mysqli_query($this->link,$query) or die($this->link->error.__LINE__);
+         if (mysqli_num_rows($result)>0){
+         return $result;
+         }else{
+         return false;
+         }
+      }
+
   //insert Quary
   public function insert($query){
    $result = mysqli_query($this->link, $query)or die($this->error__line__);
