@@ -49,14 +49,11 @@
                 <ul class="sub-menu" aria-expanded="true">
                     <li>
                         <a href="categoryAdd.php" class="has-arrow">Add Category</a>
-                        <ul class="sub-menu" aria-expanded="true">
-                            <li><a href="layouts-dark-sidebar.html">Dark Sidebar</a></li>
-                            <li><a href="layouts-compact-sidebar.html">Compact Sidebar</a></li>
-                            <li><a href="layouts-icon-sidebar.html">Icon Sidebar</a></li>
-                            <li><a href="layouts-boxed.html">Boxed Width</a></li>
-                            <li><a href="layouts-preloader.html">Preloader</a></li>
-                            <li><a href="layouts-colored-sidebar.html">Colored Sidebar</a></li>
-                        </ul>
+                    
+                    </li>
+                    <li>
+                        <a href="categorylist.php" class="has-arrow">Category List</a>
+                    
                     </li>
                     
                 </ul>

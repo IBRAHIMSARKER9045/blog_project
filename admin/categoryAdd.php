@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
             </div>
     
-            <!-- end page title -->
+            <!-- end page title -->-
 
             <div class="row">
                 <div class="col-9">
@@ -66,11 +66,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
     </div>
 </div>
-
-
-
-
-
 
 
 
