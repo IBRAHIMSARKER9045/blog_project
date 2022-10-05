@@ -36,21 +36,22 @@ $allCat = $cat->selectAllCategory();
                                     <?php
                                     if ($allCat) {
                                         $i = 0;
-                                        while ($row =mysqli_fetch_assoc($allCat)){
-                                          $i++;  
-                                                                          
-                                        ?>
-                                    <tr>
-                                        <td><?= $i?></td>
-                                        <td><?= $row['catName']?></td>
-                                        <td>
-                                          <a href="catEdit.php?editId=<?=base64_encode($row['c_id'])?>" class="btn btn-info btn-sm">Edit</a> || <a href=" " class="btn btn-danger btn-sm" >Delete</a>  
-                                        </td>
-                                    </tr>
-                                   <?php 
-                                   }
-                                } 
-                                   ?>
+                                        while ($row = mysqli_fetch_assoc($allCat)) {
+                                            $i++;
+
+                                    ?>
+                                            <tr>
+                                                <td><?= $i ?></td>
+                                                <td><?= $row['catName'] ?></td>
+                                                <td>
+                                                    <a href="catEdit.php?editId=<?= base64_encode($row['c_Id']) ?>" class="btn btn-info btn-sm">Edit</a>
+                                                    || <a href=" " class="btn btn-danger btn-sm">Delete</a>
+                                                </td>
+                                            </tr>
+                                    <?php
+                                        }
+                                    }
+                                    ?>
 
                                 </tbody>
                             </table>

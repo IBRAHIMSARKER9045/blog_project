@@ -49,10 +49,8 @@ public function selectAllCategory(){
 else{
     return false;
 }
-
-
-
+}
 
 }
-}
+
 ?>
