@@ -31,20 +31,6 @@ include_once 'inc/sidebar.php';
                     <div class="card">
                         <div class="card-body">
 
-                         <?php
-                            if (isset($_GET['editId'])) {
-                               echo $editId = $_GET['editId'];
-                                $query = "SELECT * FROM category WHERE c_Id = '$editId'";
-                                $result = $this->db->select($query);
-                                if ($result) {
-                                    while ($row = $result->fetch_assoc()) {
-                                        $catId = $row['catId'];
-                                        $catName = $row['catName'];
-                                    }
-                                }
-                            }
-                         ?>
-
                             <form action="" method="post">
                                 <div class="mb-3 row">
                                     <label for="catName" class="col-md-2 col-form-label">Category Name</label>

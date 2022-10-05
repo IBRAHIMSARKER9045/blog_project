@@ -50,7 +50,18 @@ else{
     return false;
 }
 }
-
+//delet category
+public function deleteCategory($c_Id){
+    $query = "DELETE FROM category WHERE c_Id = '$c_Id'";
+    $result = $this->db->delete($query);
+    if($result){
+        $msg = "Category deleted successfully!";
+        return $msg;
+    }else{
+        $msg = "Category not deleted!";
+        return $msg;
+    }
+}
 }
 
 ?>

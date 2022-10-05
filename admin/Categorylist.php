@@ -5,6 +5,10 @@ include_once '../classes/Category.php';
 $cat = new Category();
 
 $allCat = $cat->selectAllCategory();
+if (isset($_GET['delcat'])) {
+    $id = $_GET['delcat'];
+    $delcat = $cat->deleteCategory($c_Id);
+}
 
 
 
@@ -18,6 +22,19 @@ $allCat = $cat->selectAllCategory();
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
+                <?php
+                    if (isset($delcat)) {
+                       
+                    
+                    ?>
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                     <?= $delcat ?>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                   <?php 
+                }
+                 ?>
+                   
+                    </span>
                     <div class="card">
                         <div class="card-body">
 
@@ -44,8 +61,8 @@ $allCat = $cat->selectAllCategory();
                                                 <td><?= $i ?></td>
                                                 <td><?= $row['catName'] ?></td>
                                                 <td>
-                                                    <a href="catEdit.php?editId=<?= base64_encode($row['c_Id']) ?>" class="btn btn-info btn-sm">Edit</a>
-                                                    || <a href=" " class="btn btn-danger btn-sm">Delete</a>
+                                                    <a href="catEdit.php?c_Id=<?= base64_encode($row['c_Id']) ?>" class="btn btn-info btn-sm">Edit</a>
+                                                    || <a href=" ?delCat=<?= base64_encode($row['c_Id'])?>" onclick="return confirm('Are YOu Sure to Delete - <?=$row['catName']?>')" class="btn btn-danger btn-sm">Delete</a>
                                                 </td>
                                             </tr>
                                     <?php
