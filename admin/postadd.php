@@ -15,7 +15,7 @@ include_once 'inc/sidebar.php';
     <div class="page-content">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12">
+                <div class="col-8">
 
                 <span>
 
@@ -31,7 +31,15 @@ include_once 'inc/sidebar.php';
                     <?php
                 }
                 ?>
-                
+                <div class="card">
+                    <h4 class="card-header bg-transparent border-bottom">Add Post</h4>
+                    <label class="card-body">
+                        <form action="" method="POST">
+                            <div class="mb-3">
+                                <label for="post titel" class="form-label">Post Title</label>
+                                <input type="text" class="form-control" name="post_title" >
+                            </div>
+                            
                     </span>
         
           
