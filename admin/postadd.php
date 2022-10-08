@@ -15,7 +15,7 @@ include_once 'inc/sidebar.php';
     <div class="page-content">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-8">
+                <div class="col-9">
 
                     <span>
 
@@ -37,13 +37,13 @@ include_once 'inc/sidebar.php';
                         <label class="card-body">
                             <form action="" method="POST">
                                 <div class="mb-3">
-                                    <label for="post titel" class="form-label">Post Title</label>
+                                    <label for="post_title" class="form-label">Post Title</label>
                                     <input type="text" class="form-control" name="post_title">
                                 </div>
 
                                 <div class="mb-3">
                                     <label class=col-md-3 col-form-label for="select">Select Category</label>
-                                    <div class="col-md-9">
+                                    <div class="col-md-12">
                                         <select class="form-select">
                                             <option>select</option>
                                             <option>select</option>
@@ -52,6 +52,7 @@ include_once 'inc/sidebar.php';
                                         </select>
                                     </div>
                                 </div>
+                                <button type="submit" name="submit" class="btn btn-primary">Submit</button>
 
                     </div>
                 </div>
