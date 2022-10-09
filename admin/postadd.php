@@ -35,7 +35,7 @@ include_once 'inc/sidebar.php';
                     <div class="card">
                         <h4 class="card-header bg-transparent border-bottom">Add Post</h4>
                         <label class="card-body">
-                            <form action="" method="POST">
+                            <form action="" method="POST" enctype="multipart/form-data">
                                 <div class="mb-3">
                                     <label for="post_title" class="form-label">Post Title</label>
                                     <input type="text" class="form-control" name="post_title">
@@ -82,7 +82,7 @@ include_once 'inc/sidebar.php';
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Post Tag</label>
-                                    <input type="text" class="form-control" name="post_tag">
+                                    <input type="text" class="form-control" name="tags">
                                 </div>
 
                                 <button type="submit" name="submit" class="btn btn-primary">Submit</button>
