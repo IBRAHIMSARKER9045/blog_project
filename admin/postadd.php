@@ -15,7 +15,7 @@ include_once 'inc/sidebar.php';
     <div class="page-content">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-9">
+                <div class="col-10">
 
                     <span>
 
@@ -60,6 +60,15 @@ include_once 'inc/sidebar.php';
                             <div class ="mb-3">
                                 <label for="form-label">Discription One</label>
                                 <textarea name="dis_one" id="classic-editor" naem="area"></textarea>
+                            </div>
+
+                            <div class ="mb-3">
+                                <label for="form-label">Imge Two</label>
+                                <input type="file" class="form-control" name="imageTwo">
+                            </div>
+                            <div class ="mb-3">
+                                <label for="form-label">Discription Two</label>
+                                <textarea name="dis_two" id="classic-editor" naem="area"></textarea>
                             </div>
 
                                 <button type="submit" name="submit" class="btn btn-primary">Submit</button>
