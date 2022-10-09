@@ -42,7 +42,7 @@ include_once 'inc/sidebar.php';
                                 </div>
 
                                 <div class="mb-3">
-                                    <label class=col-md-3 col-form-label for="select">Select Category</label>
+                                    <label class=col-md-3 col-form-label for="select">Select C0`ategory</label>
                                     <div class="col-md-12">
                                         <select class="form-select">
                                             <option>select</option>
@@ -52,6 +52,12 @@ include_once 'inc/sidebar.php';
                                         </select>
                                     </div>
                                 </div>
+                                <!--imge add fild-->
+                            <div class ="mb-3">
+                                <label for="form-label">Imge One</label>
+                                <input type="file" class="form-control" name="imageOne">
+                            </div>
+
                                 <button type="submit" name="submit" class="btn btn-primary">Submit</button>
 
                     </div>
