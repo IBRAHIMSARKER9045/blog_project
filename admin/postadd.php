@@ -70,6 +70,20 @@ include_once 'inc/sidebar.php';
                                 <label for="form-label">Discription Two</label>
                                 <textarea name="dis_two" id="classic-editor_two" naem="area"></textarea>
                             </div>
+                            <div class="mb-3">
+                                    <label class="form-label" >Post Type</label>
+                                    <div class="col-md-12">
+                                        <select class="form-select" name="catId">
+                                            <option>select</option>
+                                            <option value="1">Slider</option>
+                                            <option value="0">Post</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Post Tag</label>
+                                    <input type="text" class="form-control" name="post_tag">
+                                </div>
 
                                 <button type="submit" name="submit" class="btn btn-primary">Submit</button>
 
