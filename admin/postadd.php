@@ -2,6 +2,15 @@
 include_once 'inc/header.php';
 include_once 'inc/sidebar.php';
 
+include_once '../classes/Post.php';
+$post = new Post();
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST' ){
+    $post_add = $post->AddPost($_POST,$_FILES);
+}
+
+
+
 
 
 
@@ -20,10 +29,10 @@ include_once 'inc/sidebar.php';
                     <span>
 
                         <?php
-                        if (isset($catdAdd)) {
+                        if (isset($post_add)) {
                         ?>
                             <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                <strong><?php echo $catdAdd; ?></strong>
+                                <strong><?php echo $post_add; ?></strong>
                                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 
                                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -38,7 +47,7 @@ include_once 'inc/sidebar.php';
                             <form action="" method="POST" enctype="multipart/form-data">
                                 <div class="mb-3">
                                     <label for="post_title" class="form-label">Post Title</label>
-                                    <input type="text" class="form-control" name="post_title">
+                                    <input type="text" class="form-control" name="title">
                                 </div>
 
                                 <div class="mb-3">
@@ -59,7 +68,7 @@ include_once 'inc/sidebar.php';
                             </div>
                             <div class ="mb-3">
                                 <label for="form-label">Discription One</label>
-                                <textarea name="dis_one" id="classic-editor" naem="area"></textarea>
+                                <textarea name="dis_one" id="classic-editor" name="disOne"></textarea>
                             </div>
 
                             <div class ="mb-3">
@@ -68,12 +77,12 @@ include_once 'inc/sidebar.php';
                             </div>
                             <div class ="mb-3">
                                 <label for="form-label">Discription Two</label>
-                                <textarea name="dis_two" id="classic-editor_two" naem="area"></textarea>
+                                <textarea name="dis_two" id="classic-editor_two" name="disTwo"></textarea>
                             </div>
                             <div class="mb-3">
                                     <label class="form-label" >Post Type</label>
                                     <div class="col-md-12">
-                                        <select class="form-select" name="catId">
+                                        <select class="form-select" name="postType">
                                             <option>select</option>
                                             <option value="1">Slider</option>
                                             <option value="0">Post</option>
