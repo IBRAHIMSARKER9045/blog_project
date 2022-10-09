@@ -68,7 +68,7 @@ include_once 'inc/sidebar.php';
                             </div>
                             <div class ="mb-3">
                                 <label for="form-label">Discription Two</label>
-                                <textarea name="dis_two" id="classic-editor" naem="area"></textarea>
+                                <textarea name="dis_two" id="classic-editor_two" naem="area"></textarea>
                             </div>
 
                                 <button type="submit" name="submit" class="btn btn-primary">Submit</button>

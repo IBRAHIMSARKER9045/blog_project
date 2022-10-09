@@ -123,6 +123,14 @@
             console.error( error );
         } );
         </script>
+        
+        <script>
+        ClassicEditor
+        .create( document.querySelector( '#classic-editor_two' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+        </script>
 
     </body>
 
