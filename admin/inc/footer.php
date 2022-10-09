@@ -107,12 +107,22 @@
 
         <!-- Datatable init js -->
         <script src="assets/js/pages/datatables.init.js"></script>
+        <script src="assets/libs/%40ckeditor/ckeditor5-build-classic/build/ckeditor.js"></script>
+
 
       
 
 
         <!-- App js -->
         <script src="assets/js/app.js"></script>
+
+        <script>
+        ClassicEditor
+        .create( document.querySelector( '#classic-editor' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+        </script>
 
     </body>
 

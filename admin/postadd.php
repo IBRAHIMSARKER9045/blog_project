@@ -42,9 +42,9 @@ include_once 'inc/sidebar.php';
                                 </div>
 
                                 <div class="mb-3">
-                                    <label class=col-md-3 col-form-label for="select">Select C0`ategory</label>
+                                    <label class="form-label" >Select Category</label>
                                     <div class="col-md-12">
-                                        <select class="form-select">
+                                        <select class="form-select" name="catId">
                                             <option>select</option>
                                             <option>select</option>
                                             <option>select</option>
@@ -56,6 +56,10 @@ include_once 'inc/sidebar.php';
                             <div class ="mb-3">
                                 <label for="form-label">Imge One</label>
                                 <input type="file" class="form-control" name="imageOne">
+                            </div>
+                            <div class ="mb-3">
+                                <label for="form-label">Discription One</label>
+                                <textarea name="dis_one" id="classic-editor" naem="area"></textarea>
                             </div>
 
                                 <button type="submit" name="submit" class="btn btn-primary">Submit</button>
